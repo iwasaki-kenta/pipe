@@ -217,15 +217,15 @@ class App extends Component {
 
     this.recordTransaction(transaction)
 
-    await (await fetch(`http://${window.location.hostname}:3002/txs`, {
+    await (await fetch(`http://${window.location.hostname}:8888/txs`, {
       method: 'POST',
       body: JSON.stringify(transaction)
     })).json()
   }
 
   async updateNetworkInfo() {
-    const {result} = await (await fetch(`http://${window.location.hostname}:3002/tendermint/status`)).json()
-    const chain = await (await fetch(`http://${window.location.hostname}:3002/state`)).json()
+    const {result} = await (await fetch(`http://${window.location.hostname}:8888/tendermint/status`)).json()
+    const chain = await (await fetch(`http://${window.location.hostname}:8888/state`)).json()
     this.setState({latestBlockHeight: result.latest_block_height, chain})
   }
 
