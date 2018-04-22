@@ -1,0 +1,32 @@
+{
+  "name": "pipe",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "babel-node --presets=env,stage-2 --plugins=transform-runtime main.js",
+    "server": "babel-node --presets=env,stage-2 --plugins=transform-runtime server.js",
+    "wallet": "babel-node --presets=env,stage-2 --plugins=transform-runtime wallet.js"
+  },
+  "dependencies": {
+    "bignumber.js": "^4.0.4",
+    "bluetooth-serial-port": "^2.1.6",
+    "coins": "^3.1.2",
+    "express": "^4.16.3",
+    "express-uws": "^3.0.0",
+    "express-ws": "^3.0.0",
+    "install": "^0.11.0",
+    "lodash": "^4.17.5",
+    "lotion": "^0.1.18",
+    "npm": "^5.8.0",
+    "numjs": "^0.15.1",
+    "uws": "^9.147.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "browserify": "~14.3.0"
+  }
+}
