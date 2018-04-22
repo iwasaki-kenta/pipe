@@ -100,4 +100,4 @@ app.use((state, tx, _) => {
   }
 })
 
-app.listen(3000).then(console.log)
+app.listen(3002).then(console.log)
